@@ -1,0 +1,113 @@
+commit cbb735a8bf89ddc1fd9d4a82e0089c887fa716b9
+Author: Valtteri Olejniczak <valtteri.olejniczak@outlook.com>
+Date:   Mon Mar 22 20:25:10 2021 +0200
+
+    muutoksia
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit c110ebdee6bc88b8cf32e769dfcd5105f83f3f6e
+Author: Valtteri Olejniczak <valtteri.olejniczak@outlook.com>
+Date:   Mon Mar 22 20:20:08 2021 +0200
+
+    lisättiin kansio
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 816de022082d9b9504b8590f1f92b988cc4b5ac4
+Author: Valtteri Olejniczak <valtteri.olejniczak@outlook.com>
+Date:   Mon Mar 22 20:06:57 2021 +0200
+
+    muutoksia
+
+ eka.txt    | 2 +-
+ kolmas.txt | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 45eb06747bee3225ffb02dbd464699f89d426ae2
+Author: Valtteri Olejniczak <valtteri.olejniczak@outlook.com>
+Date:   Mon Mar 22 20:04:39 2021 +0200
+
+    nimen muutos
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 374220c84634756d451db5869dd7399ea3d0e4ab
+Author: Valtteri Olejniczak <valtteri.olejniczak@outlook.com>
+Date:   Mon Mar 22 20:03:38 2021 +0200
+
+    poisto ja nimen vaihto
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 694156ac2ea9253a9e9f388fb5eb150622c31b13
+Author: Valtteri Olejniczak <valtteri.olejniczak@outlook.com>
+Date:   Mon Mar 22 19:59:22 2021 +0200
+
+    muutos
+
+ tiedosto.txt | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+commit 39435d1ae57328622d5f96f5ab06e9d34484183a
+Author: Valtteri Olejniczak <valtteri.olejniczak@outlook.com>
+Date:   Mon Mar 22 19:57:49 2021 +0200
+
+    muutos
+
+ tiedosto.txt | 59 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 59 insertions(+)
+
+commit dd7115993d2f57a2e9a4c1e26430a9e21bc4d2a5
+Author: Valtteri Olejniczak <valtteri.olejniczak@outlook.com>
+Date:   Mon Mar 22 19:14:44 2021 +0200
+
+    lisäys
+
+ stuff/jokin_tiedosto | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 3c1e231beb2c471ca7336e42e5d84afc44713110
+Author: Valtteri Olejniczak <valtteri.olejniczak@outlook.com>
+Date:   Mon Mar 22 19:11:05 2021 +0200
+
+    kaksi muutosta
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 304a06bce057b95cc227851eae671fd1aec6d0af
+Author: Valtteri Olejniczak <valtteri.olejniczak@outlook.com>
+Date:   Mon Mar 22 19:09:26 2021 +0200
+
+    lisäys
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 8ad8532e5f1d53a00a6c3446f9d39b279a12c8dc
+Author: Valtteri Olejniczak <valtteri.olejniczak@outlook.com>
+Date:   Mon Mar 22 19:07:31 2021 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 62d191b4f00aea5429617d52cfac840c13e6b28e
+Author: Valtteri Olejniczak <valtteri.olejniczak@outlook.com>
+Date:   Mon Mar 22 19:02:48 2021 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
