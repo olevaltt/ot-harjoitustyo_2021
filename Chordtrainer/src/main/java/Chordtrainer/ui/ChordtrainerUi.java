@@ -14,8 +14,17 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.shape.Circle;
 
 public class ChordtrainerUi extends Application {
+    /*
+    private BorderPane root;
+    
+    public ChordtrainerUi() {
+        root = new BorderPane();
+    }
+    */
     
     @Override
     public void start(Stage window) throws Exception {
@@ -68,15 +77,37 @@ public class ChordtrainerUi extends Application {
         Button F = new Button("F");
         Button G = new Button("G");
         
+        layout.add(new Label("Duuriasteikot"),0,1);
+        layout.add(A, 0, 2);
+        layout.add(B, 0, 3);
+        layout.add(C, 0, 4);
+        layout.add(D, 0, 5);
+        layout.add(E, 0, 6);
+        layout.add(F, 0, 7);
+        layout.add(G, 0, 8);
         
-        layout.add(A, 0, 1);
-        layout.add(B, 0, 2);
-        layout.add(C, 0, 3);
-        layout.add(D, 0, 4);
-        layout.add(E, 0, 5);
-        layout.add(F, 0, 6);
-        layout.add(G, 0, 7);
-
+        StackPane aMajorScale = createScaleView("A-duuri");
+        //A.setOnAction((event) -> layout.setCenter(aMajorScale));
+        
+        return layout;
+    }
+    
+    private StackPane createScaleView(String scalename) {
+        //täällä luodaan ikkuna, jossa eri soinnut näytetään.
+        StackPane layout = new StackPane();
+        layout.setPrefSize(300, 180);
+        layout.getChildren().add(new Label(scalename));
+        layout.setAlignment(Pos.CENTER);
+        
+        return layout;
+    }
+    
+    private StackPane createChordView(String chordname) {
+        //tällä luodaan eri soinnut
+        StackPane layout = new StackPane();
+        
+        //layout.getChildren().add(Chord(chordname)); Pitää luoda luokka, jossa tehdään erilaiset soinnut.
+        
         return layout;
     }
     
@@ -88,11 +119,25 @@ public class ChordtrainerUi extends Application {
         
         return layout;
     }
-
+    /*
+    private void switchContent(int view) {
+        switch (view) {
+            case 1:
+                root.setCenter(new Label("Scale 1"));
+                break;
+            case 2:
+                root.setCenter(new Label("Scale 2"));
+                break;
+            case 3:
+                root.setCenter(new Label("Scale 3"));
+                break;
+        }
+    
+    }
+    */
 
    
     public static void main(String[] args) {
-        
         launch(ChordtrainerUi.class);  
     }
 
