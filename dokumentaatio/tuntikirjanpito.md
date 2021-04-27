@@ -4,4 +4,5 @@ Päivä | Aika | Mitä tein
 13.4. | 5 | Aloitin projektin koodaamisen. Suunnittelin ja aloitin käyttöliittymän tekemistä.
 20.4. | 8 | Vaihdoin javan version versioon 11, tutkin netistä miten javafx:llä luodaan ruudukkoja ja kirjoitin koodia.
 26.4. | 5 | Tein toiminnallisuutta ohjelmaan.
-Yht. | 21 |
+27.4. | 2 | Selvitin sovelluksen toimintaan liittyvää musiikin teoriaa.
+Yht. | 23 |
