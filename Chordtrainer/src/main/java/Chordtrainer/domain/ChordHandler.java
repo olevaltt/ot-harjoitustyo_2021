@@ -17,7 +17,7 @@ public class ChordHandler {
         chordInfo[4] = 3;
         chordInfo[5] = 2;
         
-        Chord D = new Chord(chordInfo,1,"D");
+        Chord D = new Chord("D",1,chordInfo);
         //System.out.println("I am working!!!!");
         ArrayList<Chord> chords = new ArrayList<>();
         chords.add(D);

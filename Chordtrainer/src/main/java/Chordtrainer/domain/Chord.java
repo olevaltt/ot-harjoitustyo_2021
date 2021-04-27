@@ -14,7 +14,7 @@ public class Chord {
     private int chordPosition;
     private String name;
 
-    public Chord(int[] list, int position, String name) {
+    public Chord(String name, int position, int[] list) {
         this.name = name;
         this.chord = list;
         this.chordPosition = position;
