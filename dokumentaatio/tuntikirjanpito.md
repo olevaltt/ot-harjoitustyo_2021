@@ -5,5 +5,6 @@ Päivä | Aika | Mitä tein
 20.4. | 8 | Vaihdoin javan version versioon 11, tutkin netistä miten javafx:llä luodaan ruudukkoja ja kirjoitin koodia.
 26.4. | 5 | Tein toiminnallisuutta ohjelmaan.
 27.4. | 2 | Selvitin sovelluksen toimintaan liittyvää musiikin teoriaa.
-28.4. | 5 | Loin soinnun piirto-ominaisuus ja muokkasin valikon rakennetta.
-Yht. | 28 |
+28.4. | 5 | Loin soinnun piirto-ominaisuuden ja muokkasin valikon rakennetta.
+29.4. | 2 | Lisäsin sointuasteikkoja koodiin.
+Yht. | 30 |
