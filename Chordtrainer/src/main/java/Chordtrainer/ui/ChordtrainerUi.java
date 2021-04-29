@@ -71,7 +71,20 @@ public class ChordtrainerUi extends Application {
         drawGrid(canvas);
         
         
-        ChoiceBox scaleSelect = new ChoiceBox(FXCollections.observableArrayList(Scale.A,Scale.B,Scale.C,Scale.D));
+        ChoiceBox scaleSelect = new ChoiceBox(FXCollections.observableArrayList(
+            Scale.A,
+            Scale.A_SHARP,
+            Scale.B,
+            Scale.C,
+            Scale.C_SHARP,
+            Scale.D,
+            Scale.D_SHARP,
+            Scale.E,
+            Scale.F,
+            Scale.F_SHARP,
+            Scale.G,
+            Scale.G_SHARP
+        ));
         
         scaleSelect.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             currentScale = (Scale)newValue;
@@ -87,7 +100,6 @@ public class ChordtrainerUi extends Application {
         layout.setRight(nextChord);
         nextChord.setOnAction((event) -> {
             Chord chord = handler.getNextChord(currentScale);
-            System.out.println(chord.getName());
             drawGrid(canvas);
             showChord(chord,canvas);    
         });
@@ -107,6 +119,7 @@ public class ChordtrainerUi extends Application {
     
     
     private static void showChord(Chord chord, Pane canvas) {
+        String chordName = chord.getName();
         String chordHeight = Integer.toString(chord.getPosition());
         int[] chordInfo = chord.getChord();
         int current = 0;
@@ -144,7 +157,9 @@ public class ChordtrainerUi extends Application {
         t.setFont(new Font(30));
         canvas.getChildren().add(t);
         
-               
+        Text name = new Text(PRACTICE_VIEW_WIDTH/2-30,CHORD_START_Y-50,chordName); //Adjust this later for the end product to look better.
+        name.setFont(new Font(60));
+        canvas.getChildren().add(name);
         
         
     }
