@@ -7,4 +7,5 @@ Päivä | Aika | Mitä tein
 27.4. | 2 | Selvitin sovelluksen toimintaan liittyvää musiikin teoriaa.
 28.4. | 5 | Loin soinnun piirto-ominaisuuden ja muokkasin valikon rakennetta.
 29.4. | 2 | Lisäsin sointuasteikkoja koodiin.
-Yht. | 30 |
+10.5. | 3 | Lisäsin molliasteikot ja aloitin sointujen kierrätystoiminnon tekemisen.
+Yht. | 33 |
