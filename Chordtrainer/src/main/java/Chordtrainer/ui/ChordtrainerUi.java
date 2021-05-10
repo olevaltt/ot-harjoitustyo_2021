@@ -6,13 +6,10 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Circle;
@@ -21,17 +18,19 @@ import javafx.scene.layout.BackgroundFill;
 import javafx.scene.paint.Color;
 import javafx.scene.layout.CornerRadii;
 import Chordtrainer.domain.ChordHandler;
-import java.util.ArrayList;
 import Chordtrainer.domain.Chord;
-import javafx.event.ActionEvent;
 import javafx.scene.text.Text;
 import javafx.scene.text.Font;
 import Chordtrainer.domain.Scale;
+import java.util.concurrent.TimeUnit;
 import javafx.scene.control.ChoiceBox;
-import javafx.collections.ObservableArray;
 import javafx.collections.FXCollections;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
+import java.lang.Thread;
+import java.util.concurrent.atomic.AtomicBoolean;
+import javafx.application.Platform;
+import javafx.concurrent.Service;
+import javafx.concurrent.Task;
+import javafx.scene.control.ToggleButton;
 
 
 public class ChordtrainerUi extends Application {
@@ -46,13 +45,19 @@ public class ChordtrainerUi extends Application {
     private static final int CHORD_START_X = (PRACTICE_VIEW_WIDTH/2)-(RECTANGLE_WIDTH*5/2)-RECTANGLE_WIDTH/2;
     private static final int CHORD_START_Y = 100;
     private static final int CIRCLE_RADIUS = 15;
-    ChordHandler handler = new ChordHandler();
-    //Chord currentChord = null;
-    Scale currentScale;
+    private ChordHandler handler = new ChordHandler();
+    private Scale currentScale;
+    private chordLoopThread thread;
+    private int cycleTime;
+    private Pane canvas;
+    
     
     
     public ChordtrainerUi() {
         this.currentScale = null;
+        this.cycleTime = 5;
+        this.canvas = new Pane();
+        this.thread = new chordLoopThread(canvas, cycleTime);
     }        
     
    
@@ -66,7 +71,7 @@ public class ChordtrainerUi extends Application {
         
         layout.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
         
-        Pane canvas = new Pane();
+        
         canvas.setPrefSize(PRACTICE_VIEW_WIDTH, PRACTICE_VIEW_HEIGHT);
         drawGrid(canvas);
         
@@ -83,7 +88,19 @@ public class ChordtrainerUi extends Application {
             Scale.F,
             Scale.F_SHARP,
             Scale.G,
-            Scale.G_SHARP
+            Scale.G_SHARP,
+            Scale.A_M,
+            Scale.A_SHARP_M,
+            Scale.B_M,
+            Scale.C_M,
+            Scale.C_SHARP_M,
+            Scale.D_M,
+            Scale.D_SHARP_M,
+            Scale.E_M,
+            Scale.F_M,
+            Scale.F_SHARP_M,
+            Scale.G_M,
+            Scale.G_SHARP_M
         ));
         
         scaleSelect.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
@@ -104,6 +121,65 @@ public class ChordtrainerUi extends Application {
             showChord(chord,canvas);    
         });
         
+        
+        
+        
+        
+        
+        ToggleButton cycleChords = new ToggleButton("Cycle chords");
+        layout.setBottom(cycleChords);
+        
+        Service<Void> toggleService = new Service<Void>() {
+            
+            @Override
+            protected Task<Void> createTask() {
+                return new Task<Void>(){
+                    @Override
+                    protected Void call() throws Exception {
+                        
+                        while(!isCancelled()) {
+                            System.out.println("toimii?1");
+                            Chord chord = handler.getNextChord(currentScale);
+                            drawGrid(canvas);
+                            showChord(chord,canvas);
+                            System.out.println("toimii?2");
+                            
+                        }
+                        return null;
+                    }
+                };
+            }
+        };
+        
+        cycleChords.selectedProperty().addListener((obs, oldVal, newVal) -> {
+            if(newVal) {
+                toggleService.reset();
+                toggleService.start();
+            } else {
+                toggleService.cancel();
+            }
+  
+        });
+        
+        /*
+        cycleChords.setOnAction((event) -> {
+            System.out.println("En ole vielä loopissa");
+            
+            thread.start();
+            thread.run();
+            
+            
+            
+             
+        });
+        */
+        
+        
+        
+        
+        
+        
+        
 
         
         layout.setCenter(canvas);
@@ -114,6 +190,8 @@ public class ChordtrainerUi extends Application {
         window.show();
         
     }
+    
+    
     
     
     
@@ -188,6 +266,57 @@ public class ChordtrainerUi extends Application {
         return layout;
     }
     
+    
+    private class chordLoopThread implements Runnable {
+        private Pane canvas;
+        private int cycleTime;
+        private AtomicBoolean flag = new AtomicBoolean(false);
+        private Thread thread;
+        
+        public chordLoopThread(Pane canvas,int cycleTime) {
+            this.canvas = canvas;
+            this.cycleTime = cycleTime;
+            
+        }
+        
+        public void stop() {
+            this.flag.set(false);
+        }
+        
+        public void start() {
+            this.thread = new Thread(this);
+        }
+        
+        @Override
+        public void run() {
+            this.flag.set(true);
+            while(this.flag.get()) {
+                
+                
+                System.out.println("Minä toimin!");
+                
+                
+                
+                Platform.runLater(new Runnable(){
+                @Override
+                public void run() {
+                    Chord chord = handler.getNextChord(currentScale);
+                    drawGrid(canvas);
+                    showChord(chord,canvas); 
+                }
+                });
+                
+                
+                try {
+                    TimeUnit.SECONDS.sleep(cycleTime);  
+                } catch(InterruptedException ex) {
+                    Thread.currentThread().interrupt();
+                }
+                
+            }
+        }
+        
+    }
 
    
     public static void main(String[] args) {

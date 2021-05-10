@@ -130,6 +130,53 @@ public class ChordHandler {
         Collections.shuffle(this.gSharpChords);
         this.scales.put(Scale.G_SHARP, this.gSharpChords);
         
+        this.aMChords = new ArrayList<>(Arrays.asList(Am,Bdim,C,Dm,Em,F,G));
+        Collections.shuffle(this.aMChords);
+        this.scales.put(Scale.A_M, this.aMChords);
+        
+        this.aSharpMChords = new ArrayList<>(Arrays.asList(Asharpm,Cdim,Csharp,Dsharpm,Fm,Fsharp,Gsharp));
+        Collections.shuffle(this.aSharpMChords);
+        this.scales.put(Scale.A_SHARP_M, this.aSharpMChords);
+        
+        this.bMChords = new ArrayList<>(Arrays.asList(Bm,Csharpdim,D,Em,Fsharpm,G,A));
+        Collections.shuffle(this.bMChords);
+        this.scales.put(Scale.B_M, this.bMChords);
+        
+        this.cMChords = new ArrayList<>(Arrays.asList(Cm,Ddim,Dsharp,Fm,Gm,Gsharp,Asharp));
+        Collections.shuffle(this.cMChords);
+        this.scales.put(Scale.C_M, this.cMChords);
+        
+        this.cSharpMChords = new ArrayList<>(Arrays.asList(Csharpm,Dsharpdim,E,Fsharpm,Gsharpm,A,B));
+        Collections.shuffle(this.cSharpMChords);
+        this.scales.put(Scale.C_SHARP_M, this.cSharpMChords);
+        
+        this.dMChords = new ArrayList<>(Arrays.asList(Dm,Edim,F,Gm,Am,Asharp,C));
+        Collections.shuffle(this.dMChords);
+        this.scales.put(Scale.D_M, this.dMChords);
+        
+        this.dSharpMChords = new ArrayList<>(Arrays.asList(Dsharpm,Fdim,Fsharp,Gsharpm,Asharpm,B,Csharp));
+        Collections.shuffle(this.dSharpMChords);
+        this.scales.put(Scale.D_SHARP_M, this.dSharpMChords);
+        
+        this.eMChords = new ArrayList<>(Arrays.asList(Em,Fsharpdim,G,Am,Bm,C,D));
+        Collections.shuffle(this.eMChords);
+        this.scales.put(Scale.E_M, this.eMChords);
+        
+        this.fMChords = new ArrayList<>(Arrays.asList(Fm,Gdim,Gsharp,Asharpm,Cm,Csharp,Dsharp));
+        Collections.shuffle(this.fMChords);
+        this.scales.put(Scale.F_M, this.fMChords);
+        
+        this.fSharpMChords = new ArrayList<>(Arrays.asList(Fsharpm,Gsharpdim,A,Bm,Csharpm,D,E));
+        Collections.shuffle(this.fSharpMChords);
+        this.scales.put(Scale.F_SHARP_M, this.fSharpMChords);
+        
+        this.gMChords = new ArrayList<>(Arrays.asList(Gm,Adim,Asharp,Cm,Dm,Dsharp,F));
+        Collections.shuffle(this.gMChords);
+        this.scales.put(Scale.G_M, this.gMChords);
+        
+        this.gSharpMChords = new ArrayList<>(Arrays.asList(Gsharpm,Asharpdim,B,Csharpm,Dsharpm,E,Fsharp));
+        Collections.shuffle(this.gSharpMChords);
+        this.scales.put(Scale.G_SHARP_M, this.gSharpMChords);
     }
     
     
