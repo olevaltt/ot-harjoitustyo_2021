@@ -8,4 +8,5 @@ Päivä | Aika | Mitä tein
 28.4. | 5 | Loin soinnun piirto-ominaisuuden ja muokkasin valikon rakennetta.
 29.4. | 2 | Lisäsin sointuasteikkoja koodiin.
 10.5. | 3 | Lisäsin molliasteikot ja aloitin sointujen kierrätystoiminnon tekemisen.
-Yht. | 33 |
+11.5. | 7 | Tein kierrätystoiminnon valmiiksi, lisäsin checkstylen ja kirjoitin arkkitehtuuri-dokumenttia.
+Yht. | 40 |
