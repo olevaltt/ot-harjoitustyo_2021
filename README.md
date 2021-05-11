@@ -7,8 +7,8 @@ Sovelluksen tarkoitus on auttaa kitarasointujen ja sointuasteikkojen opettelussa
 
 * [Vaatimusmäärittely](https://github.com/olevaltt/ot-harjoitustyo_2021/blob/master/dokumentaatio/vaatimusmaarittely.md)
 * [Tuntikirjanpito](https://github.com/olevaltt/ot-harjoitustyo_2021/blob/master/dokumentaatio/tuntikirjanpito.md)
-* Arkkitehtuuri
-* Käyttöohje
+* [Arkkitehtuuri](https://github.com/olevaltt/ot-harjoitustyo_2021/blob/master/dokumentaatio/arkkitehtuuri.md)
+* [Käyttöohje](https://github.com/olevaltt/ot-harjoitustyo_2021/blob/master/dokumentaatio/kayttoohje.md)
 
 
 ## Releaset
