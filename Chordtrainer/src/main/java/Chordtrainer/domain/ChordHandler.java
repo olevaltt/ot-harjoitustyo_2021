@@ -6,7 +6,6 @@ import java.util.Collections;
 import java.util.HashMap;
 
 
-
 public class ChordHandler {
     
     private ArrayList<Chord> aChords;
@@ -36,13 +35,9 @@ public class ChordHandler {
     
     private HashMap<Scale, ArrayList<Chord>> scales;
     
-    
-    
-    
     public ChordHandler() {
         
         this.scales = new HashMap<>();
-        
         
         Chord A = new Chord("A", 1, (new int[]{-1, 0, 2, 2, 2, 0}));
         Chord Am = new Chord("Am", 1, (new int[]{-1, 0, 2, 2, 1, 0}));
@@ -80,7 +75,6 @@ public class ChordHandler {
         Chord Gsharp = new Chord("G#", 4, (new int[]{1, 3, 3, 2, 1, 1}));
         Chord Gsharpm = new Chord("G#m", 4, (new int[]{1, 3, 3, 1, 1, 1}));
         Chord Gsharpdim = new Chord("G#dim", 1, (new int[]{-1, -1, 0, 1, 0, 4}));
-        
         
         this.aChords = new ArrayList<>(Arrays.asList(A, Bm, Csharpm, D, E, Fsharpm, Gsharpdim));
         Collections.shuffle(this.aChords);
@@ -179,9 +173,6 @@ public class ChordHandler {
         this.scales.put(Scale.G_SHARP_M, this.gSharpMChords);
     }
     
-    
-   
-    
     public Chord getNextChord(Scale scale) {
 
         ArrayList<Chord> currentScale = this.scales.get(scale);
@@ -190,7 +181,5 @@ public class ChordHandler {
         currentScale.add(currentChord);
         
         return currentChord;
-    }
-    
-    
+    }   
 }
