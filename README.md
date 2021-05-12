@@ -14,3 +14,8 @@ Sovelluksen tarkoitus on auttaa kitarasointujen ja sointuasteikkojen opettelussa
 ## Releaset
 
 * [Viikko 7](https://github.com/olevaltt/ot-harjoitustyo_2021/releases/tag/viikko7)
+
+
+#### Testaus
+
+Testit ajetaan antamalla komento: mvn test
