@@ -4,11 +4,12 @@
 Sovelluksen tarkoitus on auttaa käyttäjää kitarasointujen harjoittelussa ja opettaa käyttäjää tunnistamaan mitä sointuja kuuluu mihinkin sävelasteikkoon.
 
 ## Perusversion tarjoama toiminnallisuus
-* Käyttäjä näkee näkymän, josta voi valita kohdan asetukset, harjoittele ja mahdollisesti myöhemmin kohdan lisää sointu.
-  * Harjoittele-kohdasta käyttäjä pääsee ikkunaan, josta hän voi valita sävelasteikon, jonka sointuja halutaan harjoitella.
-    * harjoitteluikkuna näyttää yksitellen sointuja, joita käyttäjän tulee soittaa.
-    * Käyttäjä voi poistua harjoitteluikkunasta takaisin ylempään ikkunaan.
-* Asetukset-ikkunasta voidaan säätää aikaa kuinka kauan yksittäinen sointu näkyy käyttäjälle.
+* Käyttäjä näkee näkymän, josta voi valita mitä sävelasteikkoa haluaa harjoitella.
+  * Sävelasteikon valittuaan käyttäjälle näytetään yksitellen sointuja, jotka kuuluvat kyseiseen asteikkoon.
+    * Käyttäjä voi liikkua seuraavaan sointuun napin painalluksella.
+    * Käyttäjä voi kytkeä napin painalluksella päälle sointujen automaattikierron joka vaihtaa näytettävän soinnun tietyn aikaintervallin välein.
+    * Painamalla automaattikiertonappia uudestaan käyttäjä voi lopettaa automaattikierron.
+* Käyttäjä voi säätää automaattikierron nopeutta liukusäätimellä.
 
 ## Jatkokehitysideoita
 * Käyttäjä voi itse lisätä sointuja sovellukseen.
