@@ -9,7 +9,7 @@ Sovelluksen tarkoitus on auttaa käyttäjää kitarasointujen harjoittelussa ja 
     * Käyttäjä voi liikkua seuraavaan sointuun napin painalluksella.
     * Käyttäjä voi kytkeä napin painalluksella päälle sointujen automaattikierron joka vaihtaa näytettävän soinnun tietyn aikaintervallin välein.
     * Painamalla automaattikiertonappia uudestaan käyttäjä voi lopettaa automaattikierron.
-* Käyttäjä voi säätää automaattikierron nopeutta liukusäätimellä.
+* Käyttäjä voi säätää automaattikierron nopeutta.
 
 ## Jatkokehitysideoita
 * Käyttäjä voi itse lisätä sointuja sovellukseen.
