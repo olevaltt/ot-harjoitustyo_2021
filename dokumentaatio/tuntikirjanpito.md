@@ -10,4 +10,5 @@ Päivä | Aika | Mitä tein
 10.5. | 3 | Lisäsin molliasteikot ja aloitin sointujen kierrätystoiminnon tekemisen.
 11.5. | 7 | Tein kierrätystoiminnon valmiiksi, lisäsin checkstylen ja kirjoitin arkkitehtuuri-dokumenttia.
 12.5. | 2 | Loin testejä ja yritin saada ne toimimaan.
-Yht. | 42 |
+13.5. | 6 | Tein automaattikierron nopeudesäätelytoiminnon koodiin. Julkaisin releasen, lisäsin jar-tiedoston ja kirjoitin dokumentaatiota.
+Yht. | 48 |
