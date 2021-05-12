@@ -9,4 +9,5 @@ Päivä | Aika | Mitä tein
 29.4. | 2 | Lisäsin sointuasteikkoja koodiin.
 10.5. | 3 | Lisäsin molliasteikot ja aloitin sointujen kierrätystoiminnon tekemisen.
 11.5. | 7 | Tein kierrätystoiminnon valmiiksi, lisäsin checkstylen ja kirjoitin arkkitehtuuri-dokumenttia.
-Yht. | 40 |
+12.5. | 2 | Loin testejä ja yritin saada ne toimimaan.
+Yht. | 42 |
